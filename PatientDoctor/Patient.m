@@ -10,14 +10,9 @@
 
 @implementation Patient
 
-- (instancetype)initWithName:(NSString *)name andWithAge:(int)age
+- (void) visit
 {
-    self = [super init];
-    if (self) {
-        _name = name;
-        _age = age;
-    }
-    return self;
+    
 }
 
 @end
