@@ -10,9 +10,6 @@
 
 @implementation Patient
 
-- (void) visit
-{
-    
-}
+
 
 @end

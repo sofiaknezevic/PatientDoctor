@@ -1,5 +1,5 @@
 //
-//  Doctor.h
+//  UserInput.h
 //  PatientDoctor
 //
 //  Created by Sofia Knezevic on 2017-02-09.
@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Doctor.h"
 #import "Patient.h"
-#import "UserInput.h"
 
-@interface Doctor : NSObject
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *specialization;
+@interface UserInput : NSObject
 
--(void)ask;
+- (NSString *)getInput;
 
 @end

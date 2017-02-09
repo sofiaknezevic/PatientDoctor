@@ -10,10 +10,12 @@
 
 @implementation Doctor
 
-- (void)acceptPatient
-{
+- (void)ask{
     
+    NSLog(@"What is your name?");
+    
+    NSLog(@"What is your age?");
+    NSLog(@"What are your symptoms?");
 }
-
 
 @end

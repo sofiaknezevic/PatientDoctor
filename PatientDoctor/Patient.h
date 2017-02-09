@@ -14,8 +14,11 @@
 @property (nonatomic, assign) int age;
 @property (nonatomic, strong) NSArray *symptoms;
 @property (nonatomic, strong) NSArray *prescriptionHistory;
+@property (nonatomic) BOOL hasHealthCard;
 
-- (void)visit;
+
+
+
 
 
 @end
