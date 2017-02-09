@@ -12,7 +12,12 @@
 
 - (instancetype)initWithName:(NSString *)name andWithAge:(int)age
 {
-    
+    self = [super init];
+    if (self) {
+        _name = name;
+        _age = age;
+    }
+    return self;
 }
 
 @end

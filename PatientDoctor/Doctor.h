@@ -10,6 +10,9 @@
 
 @interface Doctor : NSObject
 
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *specialization;
+
 - (instancetype) initWithName:(NSString *)name andWithSpecialization:(NSString *)specialization;
 
 @end

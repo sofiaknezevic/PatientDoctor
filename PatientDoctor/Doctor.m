@@ -12,7 +12,12 @@
 
 - (instancetype)initWithName:(NSString *)name andWithSpecialization:(NSString *)specialization
 {
-    
+    self = [super init];
+    if (self) {
+        _name = name;
+        _specialization = specialization;
+    }
+    return self;
 }
 
 @end

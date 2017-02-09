@@ -10,6 +10,9 @@
 
 @interface Patient : NSObject
 
+@property (nonatomic) NSString *name;
+@property int age;
+
 - (instancetype)initWithName:(NSString *)name andWithAge:(int)age;
 
 @end
