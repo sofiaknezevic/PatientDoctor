@@ -10,4 +10,6 @@
 
 @interface Doctor : NSObject
 
+- (instancetype) initWithName:(NSString *)name andWithSpecialization:(NSString *)specialization;
+
 @end

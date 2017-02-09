@@ -10,4 +10,9 @@
 
 @implementation Patient
 
+- (instancetype)initWithName:(NSString *)name andWithAge:(int)age
+{
+    
+}
+
 @end

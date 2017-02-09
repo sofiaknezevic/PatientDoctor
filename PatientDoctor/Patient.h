@@ -10,4 +10,6 @@
 
 @interface Patient : NSObject
 
+- (instancetype)initWithName:(NSString *)name andWithAge:(int)age;
+
 @end

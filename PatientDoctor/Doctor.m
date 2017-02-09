@@ -10,4 +10,9 @@
 
 @implementation Doctor
 
+- (instancetype)initWithName:(NSString *)name andWithSpecialization:(NSString *)specialization
+{
+    
+}
+
 @end
