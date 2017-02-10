@@ -13,7 +13,15 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-
+        
+        NSLog(@"\nHello! Welcome to Coder's Clinic for Coders!\nWe help coders out with all their medical problems inflicted upon them from coding their faces off.");
+        
+        Patient *newPatient = [[Patient alloc] initWithName:@"Sofia Knezevic" andWithAge:76 andWithSymptoms:@[@"coughing", @"sneezing", @"dying in general"]];
+        
+        Doctor *newDoctor = [[Doctor alloc] initWithName:@"Dr. General Practitioner-Borington" andWithSpecialization:@"Superboringurgeon"];
+        
+        //testing methods
+        [newPatient ask:newDoctor];
         
         
     }

@@ -7,13 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Patient.h"
+
+@class Patient;
+
 #import "UserInput.h"
 
 @interface Doctor : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *specialization;
+@property (nonatomic, strong) NSMutableDictionary *acceptedPatients;
+@property (nonatomic, strong) NSSet *prescriptions;
 
--(void)ask;
+- (instancetype)initWithName:(NSString *)name andWithSpecialization:(NSString *)specialization;
+
+- (void)ask:(Patient *)newPatient;
+
+- (void)acceptPatient:(Patient *)newPatient;
 
 @end

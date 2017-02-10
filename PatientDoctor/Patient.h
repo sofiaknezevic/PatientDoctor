@@ -7,16 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Doctor;
+#import "UserInput.h"
 
 @interface Patient : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) int age;
 @property (nonatomic, strong) NSArray *symptoms;
-@property (nonatomic, strong) NSArray *prescriptionHistory;
 @property (nonatomic) BOOL hasHealthCard;
 
+- (instancetype)initWithName:(NSString *)name andWithAge:(int)age andWithSymptoms:(NSArray *)symptoms;
 
+- (void)ask:(Doctor *)newDoctor;
+
+- (void)visit:(Doctor *)newDoctor;
+
+- (void)requestMedication;
 
 
 
