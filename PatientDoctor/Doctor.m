@@ -18,6 +18,10 @@
         _name = name;
         _specialization = specialization;
         _acceptedPatients = [[NSMutableDictionary alloc] init];
+        _prescriptions = @{
+                           @"coughing": @"cough medicine",
+                           @"sneezing": @"sneezing medicine",
+                           @"dying in general": @"death medicine",};
     }
     return self;
 }
@@ -43,13 +47,44 @@
     if(newPatient.hasHealthCard == YES){
         
         [self.acceptedPatients setObject:newPatient forKey:newPatient.name];
+        NSLog(@"You have been accepted, and you can be treated!");
         
     }else{
         
-        NSLog(@"Sorry but you are not accepted, your health card is either invalid or non-existent so get your shit together");
+        NSLog(@"Sorry but you are not accepted, your health card is either invalid or non-existent so get yourself together");
     }
 
     
 }
+
+-(void)addPrescription:(NSArray *)patientSymptoms intoMutableArray:(NSMutableArray *)previousMedication;
+{
+    //iterating through array and checking dictionary
+    for (NSString *symptom in patientSymptoms) {
+        
+        if (self.prescriptions[symptom]) {
+            
+            //checking if the medication has already been administered
+            if ([previousMedication containsObject:[self.prescriptions objectForKey:symptom]]) {
+                
+                NSLog(@"You already have this medication!");
+                
+            } else {
+                
+                NSLog(@"Maybe this will help you out: %@", [self.prescriptions objectForKey:symptom]);
+                
+                //adding the medication to previous medication
+                [previousMedication addObject:[self.prescriptions objectForKey:symptom]];
+                
+            }
+            
+        
+        }
+    }
+    
+    
+    
+}
+
 
 @end

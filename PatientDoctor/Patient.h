@@ -16,6 +16,7 @@
 @property (nonatomic, assign) int age;
 @property (nonatomic, strong) NSArray *symptoms;
 @property (nonatomic) BOOL hasHealthCard;
+@property (nonatomic, strong) NSMutableArray *previousMedication;
 
 - (instancetype)initWithName:(NSString *)name andWithAge:(int)age andWithSymptoms:(NSArray *)symptoms;
 
@@ -23,7 +24,7 @@
 
 - (void)visit:(Doctor *)newDoctor;
 
-- (void)requestMedication;
+- (void)requestMedication:(Doctor *)newDoctor;
 
 
 

@@ -18,6 +18,7 @@
         _name = name;
         _age = age;
         _symptoms = symptoms;
+        _hasHealthCard = YES;
         
     }
     return self;
@@ -37,11 +38,25 @@
 
 - (void)visit:(Doctor *)newDoctor
 {
-    
+    [newDoctor acceptPatient:self];
 }
 
-- (void)requestMedication
+- (void)requestMedication:(Doctor *)newDoctor
 {
+    NSLog(@"I have the following symptoms, %@, I need some help, can you give me a prescription?", self.symptoms);
+    
+    if(self.hasHealthCard == YES){
+        
+        NSLog(@"Yes, we can help you!");
+        
+        [newDoctor addPrescription:self.symptoms intoMutableArray:self.previousMedication];
+        
+    }else{
+        
+        NSLog(@"YOU DON'T HAVE A HEALTH CARD!!!! GET OUT!!");
+        
+    }
+    
     
 }
 

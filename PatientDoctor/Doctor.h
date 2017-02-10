@@ -16,12 +16,17 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *specialization;
 @property (nonatomic, strong) NSMutableDictionary *acceptedPatients;
-@property (nonatomic, strong) NSSet *prescriptions;
+@property (nonatomic, strong) NSDictionary *prescriptions;
 
 - (instancetype)initWithName:(NSString *)name andWithSpecialization:(NSString *)specialization;
 
 - (void)ask:(Patient *)newPatient;
 
 - (void)acceptPatient:(Patient *)newPatient;
+
+- (void)addPrescription:(NSArray *)patientSymptoms intoMutableArray:(NSMutableArray *)previousMedication;
+
+
+
 
 @end
